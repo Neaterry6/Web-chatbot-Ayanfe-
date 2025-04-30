@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "buildCommand": "node vercel-deploy.js",
+  "installCommand": "npm install",
+  "framework": false,
+  "outputDirectory": "dist/public",
+  "regions": ["iad1"],
+  "functions": {
+    "api/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "^/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|svg|ico|woff|woff2|ttf|otf|webp|gif))",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildEnv": {
+    "VITE_STRIPE_PUBLIC_KEY": "@vite_stripe_public_key"
+  }
+}
