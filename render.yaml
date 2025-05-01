@@ -8,30 +8,30 @@ services:
       - key: NODE_ENV
         value: production
       - key: SESSION_SECRET
-        sync: false
+        value: AROuRwAgEy7rclj8fw2pUhnaXMRqRdFu59y1aFkW0BuYKCPUURUgTbauXvwGcKpHT+g1mOIwG9gkzrMuMORr1w==
       - key: DATABASE_URL
-        sync: false
+        value: postgresql://neondb_owner:npg_FBPhiksH10Ot@ep-purple-butterfly-a6w2lltn.us-west-2.aws.neon.tech/neondb?sslmode=require
       - key: PORT
         value: 10000
       - key: STRIPE_SECRET_KEY
-        sync: false
+        value: sk_test_51RHkDvFRoFhvjQaQnNgxCZ6LBFB6SvoGyyDvUa5jfaqrkR6gbez8LUgfc5WQjEjVrhVT2LIUKHMfuInIZKEFq8s00063YoCu0g
       - key: VITE_STRIPE_PUBLIC_KEY
-        sync: false
+        value: pk_test_51RHkDvFRoFhvjQaQihs7ZHICUORST00ZZprC1F3fzFjkr3HXy0jBgr2YFHve5bF43yBywXl0WYwl9x6ZbbrVdiLR001lqO43Fk
       - key: PGDATABASE
-        sync: false
+        value: neondb
       - key: RATE_LIMIT_WINDOW_MS
         value: "900000"
       - key: RATE_LIMIT_MAX_REQUESTS
         value: "100"
       - key: ADMIN_USERNAME
-        sync: false
+        value: akewusholaabdulbakri101
       - key: ADMIN_PASSWORD
-        sync: false
+        value: Makemoney@11
       - key: ADMIN_EMAIL
-        sync: false
+        value: akewusholaabdulbakri101@gmail.com
       - key: BANK_ACCOUNT_NUMBER
-        sync: false
+        value: 9019185241
       - key: BANK_NAME
-        sync: false
+        value: opay
       - key: BANK_ACCOUNT_NAME
-        sync: false
+        valud: Akewushola Abdulbakri temitope
